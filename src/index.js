@@ -23,7 +23,7 @@ function createTracker (customOptions = {}) {
   const options = {
     mapper: buildMapper(customOptions),
     client: customOptions.client ? () => customOptions.client : defaultClient
-  };
+  }
 
   if (!options.client) {
     warn('Could not find an analytics client. Provide a client to' +
@@ -38,7 +38,7 @@ function createMetaReducer (customOptions = {}) {
   const options = {
     mapper: buildMapper(customOptions),
     client: customOptions.client ? () => customOptions.client : defaultClient
-  };
+  }
 
   if (!options.client) {
     warn('Could not find an analytics client. Provide a client to' +
@@ -154,10 +154,10 @@ function handleSpec (next: Function, action: Object, options: Object) {
   return next(action)
 }
 
-function buildMapper(customOptions) {
-  return customOptions.skipDefaultMapping ?
-    { ...customOptions.mapper } :
-    { ...defaultMapper.mapper, ...customOptions.mapper }
+function buildMapper (customOptions) {
+  return customOptions.skipDefaultMapping
+    ? { ...customOptions.mapper }
+    : { ...defaultMapper.mapper, ...customOptions.mapper }
 }
 
 export {
