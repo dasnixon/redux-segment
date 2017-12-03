@@ -213,7 +213,7 @@ const tracker = createTracker(customMapper);
 ```
 
 _Note: You can skip the
-[default mapping](https://github.com/dasnixon/redux-segment/blob/master/src/event/configuration.js)
+[default mapping](https://github.com/rangle/redux-segment/blob/master/src/event/configuration.js)
 by setting the `skipDefaultMapping` property as `true` in the config object you pass to
 `createTracker(customMapper)`._
 
